@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BrightSkies Task</string>
+    <string name="error">Invalid Username/Password, Try again.</string>
 </resources>
