@@ -9,6 +9,20 @@
         android:id="@+id/recipesFragment"
         android:name="com.planatech.brightskiestask.recipes.view.RecipesFragment"
         android:label="fragment_recipes"
-        tools:layout="@layout/fragment_recipes"/>
+        tools:layout="@layout/fragment_recipes">
+        <action
+            android:id="@+id/action_recipesFragment_to_recipeDetailsFragment"
+            app:destination="@id/recipeDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/recipesFragment" />
+    </fragment>
 
+    <fragment
+        android:id="@+id/recipeDetailsFragment"
+        android:name="com.planatech.brightskiestask.recipedetails.view.RecipeDetailsFragment"
+        android:label="fragment_recipe_details"
+        tools:layout="@layout/fragment_recipe_details"/>
 </navigation>

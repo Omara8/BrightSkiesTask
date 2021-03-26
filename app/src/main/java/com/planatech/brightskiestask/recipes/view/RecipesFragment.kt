@@ -49,7 +49,7 @@ class RecipesFragment : Fragment() {
         recipesViewModel?.recipes?.observe(viewLifecycleOwner, Observer {
             val recipesAdapter = RecipesAdapter(it) { recipe ->
                 recipesViewModel?.setSelectedRecipe(recipe)
-                //open details screen
+                navController?.navigate(R.id.action_recipesFragment_to_recipeDetailsFragment)
             }
             binding?.recipesAdapter = recipesAdapter
             binding?.recipesRecycler?.visibility = View.VISIBLE
