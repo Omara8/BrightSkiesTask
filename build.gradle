@@ -24,3 +24,11 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    retrofitVersion = '2.9.0'
+    jetpackVersion = "2.3.0"
+    lifecycleExtensionsVersion = "2.2.0"
+    navigationComponentVersion = "2.3.4"
+    loggingVersion = "4.9.0"
+}
