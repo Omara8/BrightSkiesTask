@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.planatech.brightskiestask.MainActivity
 import com.planatech.brightskiestask.R
+import com.planatech.brightskiestask.utils.AppPreferenceHelper
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity: AppCompatActivity() {
@@ -12,7 +13,7 @@ class SplashActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-
+        AppPreferenceHelper.initPreferences(this)
         setListeners()
     }
 
