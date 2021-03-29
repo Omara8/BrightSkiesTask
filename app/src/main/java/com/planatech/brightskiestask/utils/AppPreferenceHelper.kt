@@ -15,18 +15,18 @@ object AppPreferenceHelper {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
     }
 
-    private fun getFavorites() {
+    fun getFavorites(): MutableList<String>? {
         val serializedList: String? = sharedPreferences?.getString(FAVORITES, "")
         serializedList?.let {
             val gson = Gson()
             val type = object : TypeToken<MutableList<String>?>() {}.type
             favorites = gson.fromJson(it, type) ?: mutableListOf()
         }
+        return favorites
     }
 
     fun checkIsFavorite(id: String): Boolean {
-        getFavorites()
-        favorites?.forEach {
+        getFavorites()?.forEach {
             if (it == id)
                 return true
         }
